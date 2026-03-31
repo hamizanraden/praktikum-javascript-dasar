@@ -1,4 +1,3 @@
-
 // A1
 const btnNav = document.querySelector('.btn-nav');
 // Terjadi keselahan penulisan untuk class yang dipanggil yaitu btn-nav-salah
@@ -43,15 +42,17 @@ btn.addEventListener('click', function () {
 });
 
 // B2
-cards.forEach(function(card) {
+const features = document.querySelectorAll('.feature-card');
+
+features.forEach(function(card) {
   card.addEventListener('click', function() {
 
-    // Hapus active dari semua kartu
-    cards.forEach(function(item) {
+    // hapus active dari semua kartu
+    features.forEach(function(item) {
       item.classList.remove('active');
     });
 
-    // Tambahkan active ke kartu yang diklik
+    // tambahkan active ke kartu yang diklik
     card.classList.add('active');
 
   });
